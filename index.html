@@ -155,6 +155,45 @@
 
 <section id="contact" class="section">
   <div class="container" style="text-align:center">
+    <h2>Contact / Demande de démo</h2>
+    <p>Explique ton besoin et je te reviens rapidement.</p>
+
+    <form action="https://formspree.io/f/xvzzbrrd" method="POST">
+
+      <div class="row">
+        <div>
+          <label>Nom</label>
+          <input type="text" name="nom" required>
+        </div>
+        <div>
+          <label>Entreprise</label>
+          <input type="text" name="entreprise" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label>Email</label>
+          <input type="email" name="email" required>
+        </div>
+        <div>
+          <label>Téléphone</label>
+          <input type="text" name="telephone">
+        </div>
+      </div>
+
+      <label>Ton besoin</label>
+      <textarea name="message" required></textarea>
+
+      <input type="hidden" name="_subject" value="Nouveau lead — SDsmartAgents">
+
+      <button class="submit" type="submit">Envoyer</button>
+      <p class="note">Nous vous contacterons sous 24h ouvrables.</p>
+    </form>
+  </div>
+</section>
+
+  <div class="container" style="text-align:center">
     <h2>Parlons de ton recrutement</h2>
     <p>Réserve une démo pour voir si l’agent est adapté à ton entreprise.</p>
     <a href="#" class="btn">Réserver une démo</a>
