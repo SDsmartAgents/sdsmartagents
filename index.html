@@ -2,50 +2,57 @@
 <html lang="fr-CA">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="SDsmartAgents déploie des agents IA sur mesure pour la construction : recrutement & pré-qualification, et agent de réception téléphonique 24/7 (appels manqués). Démo rapide." />
-  <meta name="theme-color" content="#0b0f19" />
-  <title>SDsmartAgents — Agents IA sur mesure (Construction)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="SDsmartAgents — Agents IA sur mesure pour la construction à Montréal : agent de réception téléphonique 24/7 (appels manqués) + agent de recrutement & pré-qualification (CV)." />
+  <meta name="theme-color" content="#070A12" />
+  <title>SDsmartAgents — Agents IA pour Construction (Montréal)</title>
+
+  <!-- Favicon (optionnel) -->
+  <link rel="icon" type="image/png" href="assets/logo-sdsmartagents-hero.png" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="SDsmartAgents — Agents IA sur mesure (Construction)" />
-  <meta property="og:description" content="Recrutement & pré-qualification + Agent de réception téléphonique 24/7. Démo rapide." />
+  <meta property="og:title" content="SDsmartAgents — Agents IA pour Construction (Montréal)" />
+  <meta property="og:description" content="Arrête de perdre des appels. Qualifie automatiquement. Reçois des résumés clairs par SMS/courriel. Démo rapide." />
   <meta property="og:type" content="website" />
 
   <style>
     :root{
-      --bg:#070a12;
-      --panel:#0b1020;
-      --panel2:#0f1730;
-      --text:#eaf0ff;
+      --bg:#070A12;
+      --bg2:#0A1022;
+      --card:rgba(255,255,255,.04);
+      --card2:rgba(255,255,255,.06);
+      --line:rgba(255,255,255,.12);
+      --line2:rgba(255,255,255,.18);
+      --text:#EAF0FF;
       --muted:rgba(234,240,255,.72);
       --muted2:rgba(234,240,255,.56);
-      --line:rgba(234,240,255,.12);
-      --line2:rgba(234,240,255,.18);
-      --brand:#7c5cff;
-      --brand2:#34d399;
-      --warning:#f59e0b;
-      --shadow: 0 16px 50px rgba(0,0,0,.45);
-      --radius: 16px;
-      --radius2: 22px;
-      --max: 1100px;
+      --brand:#7C5CFF;
+      --brand2:#34D399;
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 26px;
+      --max: 1140px;
       --pad: 22px;
     }
+
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
       background:
-        radial-gradient(900px 500px at 20% 5%, rgba(124,92,255,.25), transparent 60%),
-        radial-gradient(700px 450px at 85% 10%, rgba(52,211,153,.18), transparent 55%),
-        radial-gradient(700px 450px at 60% 80%, rgba(124,92,255,.14), transparent 55%),
-        var(--bg);
+        radial-gradient(1000px 560px at 20% 0%, rgba(124,92,255,.22), transparent 60%),
+        radial-gradient(900px 520px at 85% 10%, rgba(52,211,153,.16), transparent 55%),
+        radial-gradient(700px 460px at 55% 85%, rgba(124,92,255,.12), transparent 55%),
+        linear-gradient(180deg, var(--bg), #050611 45%, var(--bg));
       color:var(--text);
       line-height:1.6;
+      overflow-x:hidden;
     }
     a{color:inherit}
     .container{max-width:var(--max); margin:0 auto; padding:0 var(--pad)}
+
+    /* Topbar */
     .topbar{
       position:sticky; top:0; z-index:50;
       backdrop-filter: blur(14px);
@@ -57,28 +64,34 @@
       gap:14px; padding:14px 0;
     }
     .brand{
-      display:flex; align-items:center; gap:10px; text-decoration:none;
-      font-weight:800; letter-spacing:.2px;
+      display:flex; align-items:center; gap:10px;
+      text-decoration:none; font-weight:900; letter-spacing:.2px;
     }
-    .logo{
-      width:34px; height:34px; border-radius:10px;
-      background: linear-gradient(135deg, rgba(124,92,255,.95), rgba(52,211,153,.9));
-      box-shadow: 0 12px 30px rgba(124,92,255,.25);
+    .brand-logo{
+      width:40px; height:40px;
+      object-fit:contain;
+      filter: drop-shadow(0 0 22px rgba(0,180,255,.35));
+    }
+    .brand-fallback{
+      width:40px; height:40px; border-radius:12px;
+      background: linear-gradient(135deg, rgba(124,92,255,.95), rgba(52,211,153,.8));
+      box-shadow: 0 16px 46px rgba(124,92,255,.22);
+      border:1px solid rgba(255,255,255,.14);
     }
     .navlinks{
-      display:flex; align-items:center; gap:14px;
+      display:flex; gap:10px; align-items:center;
     }
     .navlinks a{
       text-decoration:none;
-      font-weight:600;
       color:var(--muted);
       padding:10px 10px;
-      border-radius:12px;
+      border-radius:14px;
       border:1px solid transparent;
-      transition: .2s ease;
+      font-weight:750;
       font-size:14px;
+      transition:.18s ease;
     }
-    .navlinks a:hover{color:var(--text); border-color:var(--line2); background:rgba(234,240,255,.04)}
+    .navlinks a:hover{color:var(--text); border-color:var(--line2); background:rgba(255,255,255,.03)}
     .cta{
       display:flex; gap:10px; align-items:center;
     }
@@ -89,38 +102,29 @@
       border-radius:14px;
       border:1px solid var(--line2);
       text-decoration:none;
-      font-weight:750;
+      font-weight:850;
       font-size:14px;
-      transition:.2s ease;
+      transition:.18s ease;
       white-space:nowrap;
+      background: rgba(255,255,255,.03);
     }
-    .btn:hover{transform: translateY(-1px); border-color: rgba(234,240,255,.28)}
+    .btn:hover{transform: translateY(-1px); border-color: rgba(255,255,255,.28)}
     .btn.primary{
       border-color: transparent;
-      background: linear-gradient(135deg, rgba(124,92,255,.95), rgba(52,211,153,.75));
+      background: linear-gradient(135deg, rgba(124,92,255,.96), rgba(52,211,153,.72));
       color:#071018;
-      box-shadow: 0 14px 40px rgba(124,92,255,.18);
+      box-shadow: 0 16px 50px rgba(124,92,255,.16);
     }
-    .btn.primary:hover{filter: brightness(1.05)}
-    .btn.ghost{background: rgba(234,240,255,.04)}
+    .btn.primary:hover{filter:brightness(1.05)}
     .hamburger{display:none}
     .mobilemenu{display:none}
 
     /* Hero */
-    .hero-logo{
-  width: 160px;
-  max-width: 100%;
-  margin: 18px 0 14px;
-  filter:
-    drop-shadow(0 0 18px rgba(0,180,255,.45))
-    drop-shadow(0 0 40px rgba(0,120,255,.35));
-}
-
-    .hero{padding:56px 0 26px}
+    .hero{padding:64px 0 34px}
     .hero-grid{
       display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:22px;
+      grid-template-columns: 1.15fr .85fr;
+      gap:18px;
       align-items:stretch;
     }
     .badge{
@@ -128,27 +132,36 @@
       padding:8px 12px;
       border:1px solid var(--line2);
       border-radius:999px;
-      background: rgba(234,240,255,.04);
+      background: rgba(255,255,255,.04);
       color:var(--muted);
-      font-weight:700;
+      font-weight:800;
       font-size:13px;
     }
     .dot{
-      width:8px;height:8px;border-radius:50%;
+      width:9px;height:9px;border-radius:50%;
       background: var(--brand2);
       box-shadow:0 0 0 4px rgba(52,211,153,.14);
     }
+    .hero-logo{
+      display:block;
+      width:170px;
+      max-width:100%;
+      margin:18px 0 14px;
+      filter:
+        drop-shadow(0 0 18px rgba(0,180,255,.45))
+        drop-shadow(0 0 46px rgba(0,120,255,.28));
+    }
     h1{
-      margin:14px 0 12px;
-      font-size: 44px;
+      margin:12px 0 10px;
+      font-size:46px;
       line-height:1.06;
-      letter-spacing:-.6px;
+      letter-spacing:-.7px;
     }
     .sub{
       margin:0 0 18px;
       color:var(--muted);
       font-size:18px;
-      max-width: 56ch;
+      max-width:60ch;
     }
     .hero-actions{display:flex; gap:12px; flex-wrap:wrap; margin:18px 0 10px}
     .note{
@@ -157,10 +170,11 @@
       color:var(--muted2);
       display:flex; gap:10px; align-items:flex-start;
     }
-    .note strong{color:var(--text)}
+
+    /* Cards */
     .card{
       border:1px solid var(--line);
-      background: linear-gradient(180deg, rgba(11,16,32,.92), rgba(11,16,32,.68));
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
       border-radius: var(--radius2);
       box-shadow: var(--shadow);
     }
@@ -175,7 +189,7 @@
       padding:14px;
       border-radius: 16px;
       border:1px solid var(--line);
-      background: rgba(234,240,255,.03);
+      background: rgba(255,255,255,.03);
     }
     .stat b{display:block; font-size:18px}
     .stat span{display:block; color:var(--muted2); font-size:13px; margin-top:4px}
@@ -183,7 +197,7 @@
     .minilist li{margin:6px 0}
 
     /* Sections */
-    section{padding:52px 0}
+    section{padding:58px 0}
     .section-head{
       display:flex; align-items:flex-end; justify-content:space-between;
       gap:16px; margin-bottom:16px;
@@ -192,39 +206,53 @@
       color:var(--muted2);
       text-transform:uppercase;
       letter-spacing:.12em;
-      font-weight:800;
+      font-weight:900;
       font-size:12px;
       margin:0 0 8px;
     }
-    h2{margin:0; font-size:30px; letter-spacing:-.35px; line-height:1.15}
-    .lead{margin:8px 0 0; color:var(--muted); max-width: 70ch}
+    h2{margin:0; font-size:32px; letter-spacing:-.4px; line-height:1.15}
+    .lead{margin:8px 0 0; color:var(--muted); max-width: 72ch}
 
-    .grid3{
-      display:grid; gap:14px;
-      grid-template-columns: repeat(3, 1fr);
-      margin-top:18px;
-    }
-    .tile{
-      padding:16px;
-      border-radius: var(--radius);
-      border:1px solid var(--line);
-      background: rgba(234,240,255,.03);
-    }
-    .tile h3{margin:0 0 6px; font-size:16px}
-    .tile p{margin:0; color:var(--muted); font-size:14px}
-
+    /* Layout blocks */
     .split{
       display:grid; gap:16px;
       grid-template-columns: 1fr 1fr;
       margin-top:18px;
     }
-    .panel{padding:18px}
-    .panel h3{margin:0 0 10px; font-size:16px}
+    .panel{padding:20px}
+    .panel h3{margin:0 0 10px; font-size:18px}
     .panel p{margin:0 0 12px; color:var(--muted)}
     .checklist{margin:0; padding-left:18px; color:var(--muted)}
     .checklist li{margin:7px 0}
 
-    /* Process */
+    .chips{display:flex; gap:8px; flex-wrap:wrap; margin:12px 0 0}
+    .chip{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color:var(--muted2);
+      font-weight:800;
+      font-size:12px;
+    }
+
+    /* Proof row */
+    .proof{
+      margin-top:18px;
+      display:grid; gap:12px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .proof .tile{
+      padding:16px;
+      border-radius: var(--radius);
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+    }
+    .tile h4{margin:0 0 6px; font-size:15px}
+    .tile p{margin:0; color:var(--muted); font-size:14px}
+
+    /* Steps */
     .steps{
       margin-top:18px;
       display:grid; gap:14px;
@@ -234,7 +262,7 @@
       padding:16px;
       border-radius: var(--radius);
       border:1px solid var(--line);
-      background: rgba(234,240,255,.03);
+      background: rgba(255,255,255,.03);
       position:relative;
       overflow:hidden;
     }
@@ -250,7 +278,7 @@
       width:30px; height:30px;
       border-radius:10px;
       align-items:center; justify-content:center;
-      background: rgba(234,240,255,.06);
+      background: rgba(255,255,255,.06);
       border:1px solid var(--line);
       margin-bottom:10px;
     }
@@ -260,14 +288,14 @@
     /* FAQ */
     details{
       border:1px solid var(--line);
-      background: rgba(234,240,255,.03);
+      background: rgba(255,255,255,.03);
       border-radius: var(--radius);
       padding: 14px 14px;
     }
     details + details{margin-top:10px}
     summary{
       cursor:pointer;
-      font-weight:800;
+      font-weight:900;
       list-style:none;
       display:flex;
       justify-content:space-between;
@@ -283,10 +311,8 @@
       grid-template-columns: 1fr .9fr;
       margin-top:18px;
     }
-    form{
-      display:grid; gap:12px;
-    }
-    label{font-size:13px; color:var(--muted2); font-weight:800}
+    form{display:grid; gap:12px;}
+    label{font-size:13px; color:var(--muted2); font-weight:900}
     input, textarea{
       width:100%;
       padding:12px 12px;
@@ -296,7 +322,10 @@
       color:var(--text);
       outline:none;
     }
-    input:focus, textarea:focus{border-color: rgba(124,92,255,.55); box-shadow: 0 0 0 4px rgba(124,92,255,.15)}
+    input:focus, textarea:focus{
+      border-color: rgba(124,92,255,.55);
+      box-shadow: 0 0 0 4px rgba(124,92,255,.15)
+    }
     textarea{min-height:120px; resize:vertical}
     .formgrid{
       display:grid; gap:12px;
@@ -306,7 +335,7 @@
 
     /* Footer */
     footer{
-      padding:28px 0 40px;
+      padding:28px 0 44px;
       border-top: 1px solid var(--line);
       color:var(--muted2);
       font-size:13px;
@@ -315,26 +344,30 @@
       display:flex; justify-content:space-between; align-items:center;
       gap:12px; flex-wrap:wrap;
     }
+    .footer-row a{color:var(--muted2); text-decoration:none}
+    .footer-row a:hover{color:var(--text)}
 
     /* Responsive */
     @media (max-width: 980px){
-      .hero-grid{grid-template-columns: 1fr}
-      .grid3{grid-template-columns: 1fr}
-      .split{grid-template-columns: 1fr}
-      .steps{grid-template-columns: 1fr 1fr}
-      .contact{grid-template-columns: 1fr}
-      h1{font-size: 38px}
+      .hero-grid{grid-template-columns:1fr}
+      .split{grid-template-columns:1fr}
+      .proof{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr 1fr}
+      .contact{grid-template-columns:1fr}
+      h1{font-size:40px}
     }
     @media (max-width: 760px){
-      .navlinks, .cta{display:none}
+      .navlinks,.cta{display:none}
       .hamburger{
         display:inline-flex;
         align-items:center; justify-content:center;
         width:44px; height:44px;
         border-radius:14px;
         border:1px solid var(--line2);
-        background: rgba(234,240,255,.04);
+        background: rgba(255,255,255,.04);
         cursor:pointer;
+        color:var(--text);
+        font-weight:900;
       }
       .mobilemenu{
         display:none;
@@ -348,17 +381,18 @@
         border:1px solid var(--line);
         text-decoration:none;
         color:var(--muted);
-        background: rgba(234,240,255,.03);
+        background: rgba(255,255,255,.03);
         margin-top:10px;
-        font-weight:750;
+        font-weight:900;
       }
       .mobilemenu a.primary{
         color:#071018;
         border-color: transparent;
-        background: linear-gradient(135deg, rgba(124,92,255,.95), rgba(52,211,153,.75));
+        background: linear-gradient(135deg, rgba(124,92,255,.96), rgba(52,211,153,.72));
       }
-      .formgrid{grid-template-columns: 1fr}
-      .steps{grid-template-columns: 1fr}
+      .formgrid{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr}
+      h1{font-size:36px}
     }
     @media (prefers-reduced-motion: reduce){
       html{scroll-behavior:auto}
@@ -369,104 +403,108 @@
 
 <body>
   <!-- Topbar -->
-  <header class="topbar" role="banner">
+  <header class="topbar">
     <div class="container">
       <div class="nav">
         <a class="brand" href="#top" aria-label="Aller en haut de page">
-          <span class="logo" aria-hidden="true"></span>
-          <span>SDsmartAgents</span>
+          <img class="brand-logo" src="assets/logo-sdsmartagents.png" alt="SDsmartAgents"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+          <span class="brand-fallback" style="display:none" aria-hidden="true"></span>
+          <span style="margin-left:8px;">SDsmartAgents</span>
         </a>
 
         <nav class="navlinks" aria-label="Navigation principale">
           <a href="#agents">Agents</a>
-          <a href="#solution">Solution</a>
+          <a href="#benefices">Bénéfices</a>
           <a href="#processus">Processus</a>
           <a href="#faq">FAQ</a>
           <a href="#contact">Contact</a>
         </nav>
 
         <div class="cta">
-          <a class="btn ghost" href="#agents">Voir les agents</a>
+          <a class="btn" href="#agents">Voir les agents</a>
           <a class="btn primary" href="#contact">Réserver une démo</a>
         </div>
 
-        <button class="hamburger" id="menuBtn" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">
-          ☰
-        </button>
+        <button class="hamburger" id="menuBtn" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">☰</button>
       </div>
 
       <div class="mobilemenu" id="mobileMenu" aria-label="Menu mobile">
         <a href="#agents">Agents</a>
-        <a href="#solution">Solution</a>
+        <a href="#benefices">Bénéfices</a>
         <a href="#processus">Processus</a>
         <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-        <a class="primary" href="#contact">Réserver une démo</a>
+        <a href="#contact" class="primary">Réserver une démo</a>
       </div>
     </div>
   </header>
 
   <!-- Hero -->
-  <main id="top" class="hero" role="main">
+  <main id="top" class="hero">
     <div class="container">
       <div class="hero-grid">
         <div>
           <div class="badge">
             <span class="dot" aria-hidden="true"></span>
-            Agents IA spécialisés • Construction • Montréal
+            Construction • Toiture • Rénovation • Montréal
           </div>
-<img 
-  src="assets/sdsmartagents-hero.png"
-  alt="SDsmartAgents AI Solutions"
-  class="hero-logo"
-/>
 
-          <h1>Arrête de perdre des leads et du temps.</h1>
+          <!-- Hero logo "power house" (optionnel mais recommandé) -->
+          <img class="hero-logo" src="assets/logo-sdsmartagents.png" alt="SDsmartAgents"
+               onerror="this.style.display='none';" />
+
+          <h1>Arrête de perdre des appels et des contrats.</h1>
 
           <p class="sub">
-            On déploie des <strong>agents intelligents sur mesure</strong> qui automatisent le tri des candidatures
-            et la prise d’appels. Résultat : plus de réponses, plus vite, et des décisions plus claires.
+            SDsmartAgents déploie des <strong>agents intelligents sur mesure</strong> pour les entreprises de construction :
+            un <strong>agent de réception téléphonique 24/7</strong> (appels manqués) et un <strong>agent de recrutement</strong> (tri CV).
           </p>
 
           <div class="hero-actions">
-            <a class="btn primary" href="#contact">Réserver une démo</a>
-            <a class="btn ghost" href="#agents">Voir les agents</a>
-            <a class="btn ghost" href="#processus">Comment ça marche</a>
+            <a class="btn primary" href="#contact">Réserver une démo (15 min)</a>
+            <a class="btn" href="#agents">Voir les 2 agents</a>
+            <a class="btn" href="#processus">Comment ça marche</a>
           </div>
 
           <p class="note">
             <span aria-hidden="true">✅</span>
-            <span><strong>Aucun prix affiché :</strong> soumission sur mesure selon votre volume, vos critères et vos outils.</span>
+            <span><strong>Soumission sur mesure :</strong> aucun prix affiché. On adapte selon votre volume et vos outils.</span>
           </p>
         </div>
 
         <aside class="card hero-card" aria-label="Aperçu rapide">
-          <h3>Ce que vous recevez (concret)</h3>
+          <h3>Résultat concret</h3>
 
           <div class="statgrid">
             <div class="stat">
-              <b>Score & shortlist</b>
-              <span>Vous appelez les meilleurs en premier</span>
+              <b>Réponse 24/7</b>
+              <span>Plus d’appels perdus</span>
             </div>
             <div class="stat">
               <b>Résumé clair</b>
-              <span>30 secondes pour comprendre un dossier</span>
+              <span>SMS ou courriel</span>
             </div>
             <div class="stat">
-              <b>24/7 (option)</b>
-              <span>Agent téléphonique pour appels manqués</span>
+              <b>Qualification</b>
+              <span>Travaux, secteur, délai</span>
             </div>
             <div class="stat">
-              <b>Sur mesure</b>
-              <span>Critères, champs, workflows et livrables</span>
+              <b>Shortlist CV</b>
+              <span>Appeler les meilleurs</span>
             </div>
           </div>
 
           <ul class="minilist">
-            <li>Moins de tri manuel, moins d’oubli</li>
-            <li>Critères cohérents, score justifié</li>
-            <li>Handoff humain : vous gardez la décision finale</li>
+            <li>Moins de suivi manuel</li>
+            <li>Moins d’oublis</li>
+            <li>Plus de conversions en soumissions</li>
           </ul>
+
+          <div class="chips" aria-label="Compatibilité">
+            <span class="chip">📞 Appels entrants</span>
+            <span class="chip">📩 SMS / Email</span>
+            <span class="chip">🧱 Construction QC</span>
+          </div>
         </aside>
       </div>
     </div>
@@ -477,92 +515,85 @@
     <div class="container">
       <div class="section-head">
         <div>
-          <p class="kicker">Vos 2 agents (construction)</p>
-          <h2>Choisis ce que tu veux automatiser.</h2>
-          <p class="lead">Tu peux commencer avec 1 agent, puis ajouter l’autre quand tu veux.</p>
+          <p class="kicker">Les 2 agents</p>
+          <h2>Un problème à la fois. Une solution claire.</h2>
+          <p class="lead">Tu peux commencer avec l’agent d’appels (le plus urgent), puis ajouter le recrutement ensuite.</p>
         </div>
       </div>
 
       <div class="split">
-        <!-- Agent 1 -->
-        <article class="card panel" id="agent-recrutement">
-          <p class="kicker">Agent IA</p>
-          <h3>Recrutement & pré-qualification (CV)</h3>
-          <p>
-            L’agent lit les candidatures, extrait l’info utile, vérifie l’admissibilité selon vos règles,
-            puis classe automatiquement les profils.
-          </p>
-          <ul class="checklist">
-            <li>Analyse CV + pièces jointes (PDF, docs…)</li>
-            <li>Critères obligatoires vs optionnels + scoring personnalisé</li>
-            <li>Justification du score + manques à valider</li>
-            <li>Shortlist exploitable (qui appeler, quoi demander)</li>
-          </ul>
-          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
-            <a class="btn ghost" href="#solution">Voir la solution</a>
-            <a class="btn primary" href="#contact">Demander une démo</a>
-          </div>
-        </article>
-
-        <!-- Agent 2 -->
         <article class="card panel" id="agent-reception">
           <p class="kicker">Agent téléphonique</p>
           <h3>Réception intelligente (appels manqués & entrants)</h3>
           <p>
-            L’agent répond automatiquement aux appels quand votre équipe est occupée, pose les bonnes questions,
-            et vous envoie un résumé clair et structuré de chaque demande.
+            Répond automatiquement quand ton équipe est occupée, qualifie le client, puis t’envoie un résumé exploitable.
           </p>
           <ul class="checklist">
             <li>Répond 24/7 (chantier, réunion, hors heures)</li>
-            <li>Qualifie : soumission vs info, type de travaux, ville/secteur, délai, disponibilités</li>
+            <li>Questions clés : type de travaux, ville/secteur, délai, disponibilités</li>
+            <li>Ton naturel en français québécois</li>
             <li>Résumé prêt à l’action par SMS ou courriel</li>
           </ul>
+          <div class="chips">
+            <span class="chip">🔥 ROI immédiat</span>
+            <span class="chip">📞 Moins d’appels perdus</span>
+            <span class="chip">✅ Qualification</span>
+          </div>
           <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
-            <a class="btn ghost" href="#processus">Processus</a>
             <a class="btn primary" href="#contact">Vérifier compatibilité</a>
+            <a class="btn" href="#faq">FAQ</a>
+          </div>
+        </article>
+
+        <article class="card panel" id="agent-recrutement">
+          <p class="kicker">Agent RH</p>
+          <h3>Recrutement & pré-qualification (CV)</h3>
+          <p>
+            L’agent analyse CV et documents, applique tes critères, et génère une shortlist claire avec justification.
+          </p>
+          <ul class="checklist">
+            <li>Extraction CV (PDF, pièces jointes)</li>
+            <li>Critères obligatoires vs optionnels + scoring</li>
+            <li>Justification + manques à valider</li>
+            <li>Shortlist prête à appeler</li>
+          </ul>
+          <div class="chips">
+            <span class="chip">⏱️ Moins de tri</span>
+            <span class="chip">🧠 Score clair</span>
+            <span class="chip">✅ Cohérence</span>
+          </div>
+          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn" href="#contact">Demander une démo</a>
+            <a class="btn" href="#processus">Processus</a>
           </div>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- Solution -->
-  <section id="solution">
+  <!-- Benefits -->
+  <section id="benefices">
     <div class="container">
       <div class="section-head">
         <div>
-          <p class="kicker">La solution</p>
-          <h2>Standardiser. Automatiser. Accélérer.</h2>
-          <p class="lead">
-            Tu gardes le contrôle : l’agent prépare, organise et priorise — un humain décide et conclut.
-          </p>
+          <p class="kicker">Bénéfices</p>
+          <h2>Plus de contrôle, plus de vitesse, moins de pertes.</h2>
+          <p class="lead">On ne remplace pas ton équipe : on la rend plus rapide et plus constante.</p>
         </div>
       </div>
 
-      <div class="grid3">
+      <div class="proof">
         <div class="tile">
-          <h3>📄 Analyse & extraction</h3>
-          <p>CV, documents, informations clés, structure uniforme.</p>
+          <h4>📞 Appels : tu récupères des leads</h4>
+          <p>Chaque appel manqué peut être un contrat perdu. L’agent qualifie et te renvoie l’info.</p>
         </div>
         <div class="tile">
-          <h3>🧠 Critères sur mesure</h3>
-          <p>Obligatoires vs optionnels, poids, scoring, règles claires.</p>
+          <h4>🧠 Décisions plus simples</h4>
+          <p>Résumés structurés : tu sais quoi faire, quoi demander, et qui prioriser.</p>
         </div>
         <div class="tile">
-          <h3>✅ Résultat exploitable</h3>
-          <p>Shortlist + manques + résumé rapide. Moins de flou, plus d’action.</p>
-        </div>
-        <div class="tile">
-          <h3>📞 Réception 24/7</h3>
-          <p>Plus d’appels perdus : qualification + résumé automatique.</p>
-        </div>
-        <div class="tile">
-          <h3>🔁 Itérations rapides</h3>
-          <p>On ajuste les règles selon la réalité du terrain.</p>
-        </div>
-        <div class="tile">
-          <h3>🔒 Contrôle & sécurité</h3>
-          <p>Accès contrôlés et séparation claire entre traitement et décision.</p>
+          <h4>✅ Expérience client plus pro</h4>
+          <p>Réponses rapides, questions claires, suivi plus constant — même en période chargée.</p>
         </div>
       </div>
     </div>
@@ -574,31 +605,31 @@
       <div class="section-head">
         <div>
           <p class="kicker">Déploiement</p>
-          <h2>Rapide, concret, orienté résultats.</h2>
-          <p class="lead">On vise une mise en production simple, puis on optimise avec tes retours.</p>
+          <h2>Rapide et orienté résultats.</h2>
+          <p class="lead">Diagnostic → prototype → déploiement → optimisation. Simple.</p>
         </div>
       </div>
 
       <div class="steps">
         <div class="step">
           <b>1</b>
-          <h3>Diagnostic (20 min)</h3>
-          <p>Vos besoins, volume, critères, outils, et résultat attendu.</p>
+          <h3>Diagnostic</h3>
+          <p>On comprend ton flux (appels, soumissions, CV) et ton résultat idéal.</p>
         </div>
         <div class="step">
           <b>2</b>
           <h3>Prototype</h3>
-          <p>Règles + scoring + format de résumé/shortlist + tests.</p>
+          <p>Questions + résumé + intégrations + tests rapides.</p>
         </div>
         <div class="step">
           <b>3</b>
           <h3>Déploiement</h3>
-          <p>Connexion (form/email/appels) + ajustements + production.</p>
+          <p>Mise en production + réglages selon tes retours.</p>
         </div>
         <div class="step">
           <b>4</b>
           <h3>Optimisation</h3>
-          <p>Amélioration continue pour augmenter la qualité des résultats.</p>
+          <p>Amélioration continue : meilleure qualification, meilleures conversions.</p>
         </div>
       </div>
     </div>
@@ -611,36 +642,28 @@
         <div>
           <p class="kicker">FAQ</p>
           <h2>Questions fréquentes</h2>
-          <p class="lead.</p>
+          <p class="lead">Si tu veux, je te fais aussi une section “Objections” pour appels de vente.</p>
         </div>
       </div>
 
       <details>
-        <summary>Est-ce que ça remplace un RH / une réceptionniste ? <span aria-hidden="true">+</span></summary>
-        <p class="faq-a">
-          Non. L’agent prépare et qualifie (tri / questions / résumé). Un humain garde la décision finale et la relation.
-        </p>
+        <summary>Est-ce que ça remplace une réceptionniste ? <span aria-hidden="true">+</span></summary>
+        <p class="faq-a">Non. L’agent couvre surtout quand votre équipe est occupée ou hors heures, et vous envoie un résumé prêt à rappeler.</p>
       </details>
 
       <details>
-        <summary>Est-ce un logiciel standard ? <span aria-hidden="true">+</span></summary>
-        <p class="faq-a">
-          Non. Chaque agent est configuré sur mesure : critères, champs, règles, ton, livrables, et intégrations.
-        </p>
+        <summary>Est-ce que ça fonctionne avec mon numéro actuel ? <span aria-hidden="true">+</span></summary>
+        <p class="faq-a">Souvent oui. On vérifie la configuration pendant la démo et on adapte selon votre réalité.</p>
       </details>
 
       <details>
         <summary>Combien ça coûte ? <span aria-hidden="true">+</span></summary>
-        <p class="faq-a">
-          Soumission sur mesure selon la complexité, le volume et les intégrations. Démo → diagnostic → offre claire.
-        </p>
+        <p class="faq-a">Soumission sur mesure selon le volume, la complexité et les intégrations. On clarifie tout après la démo.</p>
       </details>
 
       <details>
-        <summary>Est-ce sécurisé ? <span aria-hidden="true">+</span></summary>
-        <p class="faq-a">
-          Oui : accès contrôlés et séparation claire entre traitement et décision, selon vos besoins.
-        </p>
+        <summary>Est-ce compliqué à utiliser ? <span aria-hidden="true">+</span></summary>
+        <p class="faq-a">Non. Le but est que ça soit simple : vous recevez des résumés et vous gardez la décision finale.</p>
       </details>
     </div>
   </section>
@@ -652,13 +675,13 @@
         <div>
           <p class="kicker">Contact</p>
           <h2>Demande de démo</h2>
-          <p class="lead">Parle-moi de ton besoin — je te reviens rapidement avec la meilleure approche.</p>
+          <p class="lead">Explique ton besoin, je te reviens rapidement.</p>
         </div>
       </div>
 
       <div class="contact">
         <div class="card panel">
-          <!-- Formspree (gardé) -->
+          <!-- ✅ Formspree (gardé tel quel) -->
           <form action="https://formspree.io/f/xvzzbrrd" method="POST">
             <div class="formgrid">
               <div>
@@ -699,14 +722,14 @@
           <h3>Pour accélérer la démo</h3>
           <p>Ajoute 2-3 infos (même approximatives) :</p>
           <ul class="checklist">
-            <li>Quel agent t’intéresse (recrutement, réception, ou les 2)</li>
-            <li>Volume (CV/semaine ou appels/jour)</li>
-            <li>Ton “résultat idéal” (shortlist? résumé SMS? prise de RDV?)</li>
+            <li>Quel agent t’intéresse (appels / recrutement / les 2)</li>
+            <li>Volume (appels/jour ou CV/semaine)</li>
+            <li>Ton résultat idéal (résumé SMS? prise d’info? shortlist?)</li>
           </ul>
 
-          <div style="margin-top:14px; padding:14px; border-radius:16px; border:1px solid var(--line); background: rgba(234,240,255,.03);">
+          <div style="margin-top:14px; padding:14px; border-radius:16px; border:1px solid var(--line); background: rgba(255,255,255,.03);">
             <p style="margin:0; color:var(--muted); font-size:14px;">
-              <strong style="color:var(--text)">Astuce :</strong> si tu veux, je peux te fournir un script d’appel + une page “Offre” ultra claire pour convertir plus.
+              <strong style="color:var(--text)">Tip :</strong> Commence avec l’agent d’appels (ROI immédiat), puis on ajoute le recrutement si ça fait du sens.
             </p>
           </div>
         </aside>
@@ -717,11 +740,11 @@
   <footer>
     <div class="container">
       <div class="footer-row">
-        <div>© <span id="year"></span> SDsmartAgents — Agents intelligents sur mesure • Montréal, QC</div>
+        <div>© <span id="year"></span> SDsmartAgents — Montréal, QC</div>
         <div style="display:flex; gap:12px; flex-wrap:wrap;">
-          <a href="#agents" style="color:var(--muted2); text-decoration:none;">Agents</a>
-          <a href="#processus" style="color:var(--muted2); text-decoration:none;">Processus</a>
-          <a href="#contact" style="color:var(--muted2); text-decoration:none;">Contact</a>
+          <a href="#agents">Agents</a>
+          <a href="#processus">Processus</a>
+          <a href="#contact">Contact</a>
         </div>
       </div>
     </div>
@@ -731,18 +754,20 @@
     // Menu mobile
     const btn = document.getElementById('menuBtn');
     const menu = document.getElementById('mobileMenu');
-    btn?.addEventListener('click', () => {
-      const open = menu.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
 
-    // Fermer menu mobile après clic
-    menu?.querySelectorAll('a')?.forEach(a => {
-      a.addEventListener('click', () => {
-        menu.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        const open = menu.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
       });
-    });
+
+      menu.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          menu.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
 
     // Année footer
     document.getElementById('year').textContent = new Date().getFullYear();
