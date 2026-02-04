@@ -3,29 +3,29 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="SDsmartAgents — Agents IA sur mesure pour la construction à Montréal : agent de réception téléphonique 24/7 (appels manqués) + agent de recrutement & pré-qualification (CV)." />
-  <meta name="theme-color" content="#070A12" />
-  <title>SDsmartAgents — Agents IA pour Construction (Montréal)</title>
+  <meta name="description" content="SDsmartAgents — Agents intelligents sur mesure pour entreprises de construction à Montréal : agent de réception téléphonique 24/7 et agent de recrutement (tri & pré-qualification)." />
+  <meta name="theme-color" content="#0B1020" />
+  <title>SDsmartAgents — Agents intelligents pour la construction (Montréal)</title>
 
-  <!-- Favicon (optionnel) -->
-  <link rel="icon" type="image/png" href="assets/logo-sdsmartagents-hero.png" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo-sdsmartagents.png" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="SDsmartAgents — Agents IA pour Construction (Montréal)" />
-  <meta property="og:description" content="Arrête de perdre des appels. Qualifie automatiquement. Reçois des résumés clairs par SMS/courriel. Démo rapide." />
+  <meta property="og:title" content="SDsmartAgents — Agents intelligents pour la construction (Montréal)" />
+  <meta property="og:description" content="Réception téléphonique 24/7 et recrutement automatisé : résumés structurés, qualification, shortlist. Démo sur demande." />
   <meta property="og:type" content="website" />
 
   <style>
     :root{
       --bg:#070A12;
-      --bg2:#0A1022;
-      --card:rgba(255,255,255,.04);
-      --card2:rgba(255,255,255,.06);
-      --line:rgba(255,255,255,.12);
-      --line2:rgba(255,255,255,.18);
+      --bg2:#0B1020;
+      --card: rgba(255,255,255,.04);
+      --card2: rgba(255,255,255,.06);
+      --line: rgba(255,255,255,.10);
+      --line2: rgba(255,255,255,.16);
       --text:#EAF0FF;
-      --muted:rgba(234,240,255,.72);
-      --muted2:rgba(234,240,255,.56);
+      --muted: rgba(234,240,255,.72);
+      --muted2: rgba(234,240,255,.55);
       --brand:#7C5CFF;
       --brand2:#34D399;
       --shadow: 0 18px 60px rgba(0,0,0,.45);
@@ -40,12 +40,12 @@
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      background:
-        radial-gradient(1000px 560px at 20% 0%, rgba(124,92,255,.22), transparent 60%),
-        radial-gradient(900px 520px at 85% 10%, rgba(52,211,153,.16), transparent 55%),
-        radial-gradient(700px 460px at 55% 85%, rgba(124,92,255,.12), transparent 55%),
-        linear-gradient(180deg, var(--bg), #050611 45%, var(--bg));
       color:var(--text);
+      background:
+        radial-gradient(1000px 560px at 18% 0%, rgba(124,92,255,.18), transparent 60%),
+        radial-gradient(900px 520px at 86% 10%, rgba(52,211,153,.12), transparent 55%),
+        radial-gradient(700px 460px at 55% 85%, rgba(124,92,255,.10), transparent 55%),
+        linear-gradient(180deg, var(--bg), #060716 48%, var(--bg));
       line-height:1.6;
       overflow-x:hidden;
     }
@@ -56,7 +56,7 @@
     .topbar{
       position:sticky; top:0; z-index:50;
       backdrop-filter: blur(14px);
-      background: rgba(7,10,18,.55);
+      background: rgba(7,10,18,.60);
       border-bottom:1px solid var(--line);
     }
     .nav{
@@ -65,18 +65,17 @@
     }
     .brand{
       display:flex; align-items:center; gap:10px;
-      text-decoration:none; font-weight:900; letter-spacing:.2px;
+      text-decoration:none;
+      font-weight:900;
+      letter-spacing:.2px;
     }
     .brand-logo{
       width:40px; height:40px;
       object-fit:contain;
-      filter: drop-shadow(0 0 22px rgba(0,180,255,.35));
-    }
-    .brand-fallback{
-      width:40px; height:40px; border-radius:12px;
-      background: linear-gradient(135deg, rgba(124,92,255,.95), rgba(52,211,153,.8));
-      box-shadow: 0 16px 46px rgba(124,92,255,.22);
+      border-radius:12px;
       border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.03);
+      box-shadow: 0 14px 40px rgba(0,0,0,.35);
     }
     .navlinks{
       display:flex; gap:10px; align-items:center;
@@ -87,14 +86,16 @@
       padding:10px 10px;
       border-radius:14px;
       border:1px solid transparent;
-      font-weight:750;
+      font-weight:800;
       font-size:14px;
       transition:.18s ease;
     }
-    .navlinks a:hover{color:var(--text); border-color:var(--line2); background:rgba(255,255,255,.03)}
-    .cta{
-      display:flex; gap:10px; align-items:center;
+    .navlinks a:hover{
+      color:var(--text);
+      border-color:var(--line2);
+      background: rgba(255,255,255,.03);
     }
+    .cta{display:flex; gap:10px; align-items:center;}
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
       gap:10px;
@@ -102,28 +103,28 @@
       border-radius:14px;
       border:1px solid var(--line2);
       text-decoration:none;
-      font-weight:850;
+      font-weight:900;
       font-size:14px;
+      background: rgba(255,255,255,.03);
       transition:.18s ease;
       white-space:nowrap;
-      background: rgba(255,255,255,.03);
     }
-    .btn:hover{transform: translateY(-1px); border-color: rgba(255,255,255,.28)}
+    .btn:hover{transform: translateY(-1px); border-color: rgba(255,255,255,.26)}
     .btn.primary{
       border-color: transparent;
       background: linear-gradient(135deg, rgba(124,92,255,.96), rgba(52,211,153,.72));
       color:#071018;
-      box-shadow: 0 16px 50px rgba(124,92,255,.16);
+      box-shadow: 0 16px 50px rgba(124,92,255,.14);
     }
     .btn.primary:hover{filter:brightness(1.05)}
     .hamburger{display:none}
     .mobilemenu{display:none}
 
     /* Hero */
-    .hero{padding:64px 0 34px}
+    .hero{padding:72px 0 34px}
     .hero-grid{
       display:grid;
-      grid-template-columns: 1.15fr .85fr;
+      grid-template-columns: 1.12fr .88fr;
       gap:18px;
       align-items:stretch;
     }
@@ -134,34 +135,47 @@
       border-radius:999px;
       background: rgba(255,255,255,.04);
       color:var(--muted);
-      font-weight:800;
-      font-size:13px;
+      font-weight:900;
+      font-size:12px;
+      letter-spacing:.04em;
+      text-transform: uppercase;
     }
     .dot{
       width:9px;height:9px;border-radius:50%;
       background: var(--brand2);
       box-shadow:0 0 0 4px rgba(52,211,153,.14);
     }
-    .hero-logo{
-      display:block;
-      width:170px;
-      max-width:100%;
-      margin:18px 0 14px;
-      filter:
-        drop-shadow(0 0 18px rgba(0,180,255,.45))
-        drop-shadow(0 0 46px rgba(0,120,255,.28));
+    .hero-mark{
+      display:flex; align-items:center; gap:12px;
+      margin:18px 0 10px;
     }
+    .hero-mark img{
+      width:78px; height:78px;
+      object-fit:contain;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.03);
+      box-shadow: 0 18px 60px rgba(0,0,0,.42);
+      filter: drop-shadow(0 0 24px rgba(124,92,255,.18));
+    }
+    .hero-mark .mark-text{
+      display:flex; flex-direction:column;
+      gap:2px;
+    }
+    .hero-mark .mark-text b{font-size:14px; letter-spacing:.06em; text-transform:uppercase}
+    .hero-mark .mark-text span{color:var(--muted2); font-size:13px}
+
     h1{
       margin:12px 0 10px;
-      font-size:46px;
-      line-height:1.06;
-      letter-spacing:-.7px;
+      font-size:44px;
+      line-height:1.08;
+      letter-spacing:-.6px;
     }
     .sub{
       margin:0 0 18px;
       color:var(--muted);
       font-size:18px;
-      max-width:60ch;
+      max-width:64ch;
     }
     .hero-actions{display:flex; gap:12px; flex-wrap:wrap; margin:18px 0 10px}
     .note{
@@ -191,13 +205,13 @@
       border:1px solid var(--line);
       background: rgba(255,255,255,.03);
     }
-    .stat b{display:block; font-size:18px}
+    .stat b{display:block; font-size:16px}
     .stat span{display:block; color:var(--muted2); font-size:13px; margin-top:4px}
     .minilist{margin:14px 0 0; padding-left:18px; color:var(--muted)}
     .minilist li{margin:6px 0}
 
     /* Sections */
-    section{padding:58px 0}
+    section{padding:60px 0}
     .section-head{
       display:flex; align-items:flex-end; justify-content:space-between;
       gap:16px; margin-bottom:16px;
@@ -211,9 +225,8 @@
       margin:0 0 8px;
     }
     h2{margin:0; font-size:32px; letter-spacing:-.4px; line-height:1.15}
-    .lead{margin:8px 0 0; color:var(--muted); max-width: 72ch}
+    .lead{margin:8px 0 0; color:var(--muted); max-width: 74ch}
 
-    /* Layout blocks */
     .split{
       display:grid; gap:16px;
       grid-template-columns: 1fr 1fr;
@@ -233,17 +246,17 @@
       border:1px solid var(--line);
       background: rgba(255,255,255,.03);
       color:var(--muted2);
-      font-weight:800;
+      font-weight:900;
       font-size:12px;
     }
 
-    /* Proof row */
-    .proof{
+    /* Capability tiles */
+    .tiles{
       margin-top:18px;
       display:grid; gap:12px;
       grid-template-columns: repeat(3, 1fr);
     }
-    .proof .tile{
+    .tile{
       padding:16px;
       border-radius: var(--radius);
       border:1px solid var(--line);
@@ -270,7 +283,7 @@
       content:"";
       position:absolute; inset:-60px -60px auto auto;
       width:120px; height:120px;
-      background: radial-gradient(circle at 30% 30%, rgba(124,92,255,.35), transparent 55%);
+      background: radial-gradient(circle at 30% 30%, rgba(124,92,255,.30), transparent 55%);
       transform: rotate(20deg);
     }
     .step b{
@@ -281,6 +294,7 @@
       background: rgba(255,255,255,.06);
       border:1px solid var(--line);
       margin-bottom:10px;
+      font-weight:900;
     }
     .step h3{margin:0 0 6px; font-size:16px}
     .step p{margin:0; color:var(--muted); font-size:14px}
@@ -351,7 +365,7 @@
     @media (max-width: 980px){
       .hero-grid{grid-template-columns:1fr}
       .split{grid-template-columns:1fr}
-      .proof{grid-template-columns:1fr}
+      .tiles{grid-template-columns:1fr}
       .steps{grid-template-columns:1fr 1fr}
       .contact{grid-template-columns:1fr}
       h1{font-size:40px}
@@ -402,44 +416,42 @@
 </head>
 
 <body>
-  <!-- Topbar -->
   <header class="topbar">
     <div class="container">
       <div class="nav">
         <a class="brand" href="#top" aria-label="Aller en haut de page">
           <img class="brand-logo" src="assets/logo-sdsmartagents.png" alt="SDsmartAgents"
                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-          <span class="brand-fallback" style="display:none" aria-hidden="true"></span>
-          <span style="margin-left:8px;">SDsmartAgents</span>
+          <span class="brand-logo" style="display:none; background:linear-gradient(135deg, rgba(124,92,255,.96), rgba(52,211,153,.72)); border:none;"></span>
+          <span style="margin-left:6px;">SDsmartAgents</span>
         </a>
 
         <nav class="navlinks" aria-label="Navigation principale">
-          <a href="#agents">Agents</a>
-          <a href="#benefices">Bénéfices</a>
-          <a href="#processus">Processus</a>
+          <a href="#agents">Solutions</a>
+          <a href="#capacites">Capacités</a>
+          <a href="#processus">Déploiement</a>
           <a href="#faq">FAQ</a>
           <a href="#contact">Contact</a>
         </nav>
 
         <div class="cta">
-          <a class="btn" href="#agents">Voir les agents</a>
-          <a class="btn primary" href="#contact">Réserver une démo</a>
+          <a class="btn" href="#agents">Voir les solutions</a>
+          <a class="btn primary" href="#contact">Demander une démo</a>
         </div>
 
         <button class="hamburger" id="menuBtn" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">☰</button>
       </div>
 
       <div class="mobilemenu" id="mobileMenu" aria-label="Menu mobile">
-        <a href="#agents">Agents</a>
-        <a href="#benefices">Bénéfices</a>
-        <a href="#processus">Processus</a>
+        <a href="#agents">Solutions</a>
+        <a href="#capacites">Capacités</a>
+        <a href="#processus">Déploiement</a>
         <a href="#faq">FAQ</a>
-        <a href="#contact" class="primary">Réserver une démo</a>
+        <a href="#contact" class="primary">Demander une démo</a>
       </div>
     </div>
   </header>
 
-  <!-- Hero -->
   <main id="top" class="hero">
     <div class="container">
       <div class="hero-grid">
@@ -449,163 +461,161 @@
             Construction • Toiture • Rénovation • Montréal
           </div>
 
-          <!-- Hero logo "power house" (optionnel mais recommandé) -->
-          <img class="hero-logo" src="assets/logo-sdsmartagents.png" alt="SDsmartAgents"
-               onerror="this.style.display='none';" />
+          <div class="hero-mark">
+            <img src="assets/logo-sdsmartagents.png" alt="Logo SDsmartAgents"
+                 onerror="this.style.display='none';" />
+            <div class="mark-text">
+              <b>SDsmartAgents</b>
+              <span>Agents intelligents sur mesure</span>
+            </div>
+          </div>
 
-          <h1>Arrête de perdre des appels et des contrats.</h1>
+          <h1>Agents intelligents pour optimiser l’accueil client et les opérations.</h1>
 
           <p class="sub">
-            SDsmartAgents déploie des <strong>agents intelligents sur mesure</strong> pour les entreprises de construction :
-            un <strong>agent de réception téléphonique 24/7</strong> (appels manqués) et un <strong>agent de recrutement</strong> (tri CV).
+            Nous concevons et déployons des agents spécialisés pour les entreprises de construction :
+            <strong>réception téléphonique 24/7</strong> (qualification + résumé) et
+            <strong>recrutement</strong> (tri & pré-qualification des candidatures).
           </p>
 
           <div class="hero-actions">
-            <a class="btn primary" href="#contact">Réserver une démo (15 min)</a>
-            <a class="btn" href="#agents">Voir les 2 agents</a>
-            <a class="btn" href="#processus">Comment ça marche</a>
+            <a class="btn primary" href="#contact">Demander une démo</a>
+            <a class="btn" href="#agents">Voir les solutions</a>
+            <a class="btn" href="#processus">Processus</a>
           </div>
 
           <p class="note">
-            <span aria-hidden="true">✅</span>
-            <span><strong>Soumission sur mesure :</strong> aucun prix affiché. On adapte selon votre volume et vos outils.</span>
+            <span aria-hidden="true">ℹ️</span>
+            <span><strong>Approche sur mesure :</strong> la configuration dépend de votre volume, de vos critères et de vos outils.</span>
           </p>
         </div>
 
-        <aside class="card hero-card" aria-label="Aperçu rapide">
-          <h3>Résultat concret</h3>
+        <aside class="card hero-card" aria-label="Résumé">
+          <h3>Ce que vous obtenez</h3>
 
           <div class="statgrid">
             <div class="stat">
-              <b>Réponse 24/7</b>
-              <span>Plus d’appels perdus</span>
+              <b>Qualification structurée</b>
+              <span>Questions cohérentes, informations complètes</span>
             </div>
             <div class="stat">
-              <b>Résumé clair</b>
-              <span>SMS ou courriel</span>
+              <b>Compte-rendu clair</b>
+              <span>SMS ou courriel, prêt pour l’action</span>
             </div>
             <div class="stat">
-              <b>Qualification</b>
-              <span>Travaux, secteur, délai</span>
+              <b>Disponibilité</b>
+              <span>Couverture 24/7 (selon votre besoin)</span>
             </div>
             <div class="stat">
-              <b>Shortlist CV</b>
-              <span>Appeler les meilleurs</span>
+              <b>Shortlist RH</b>
+              <span>Priorisation des candidatures</span>
             </div>
           </div>
 
           <ul class="minilist">
-            <li>Moins de suivi manuel</li>
-            <li>Moins d’oublis</li>
-            <li>Plus de conversions en soumissions</li>
+            <li>Expérience client plus uniforme</li>
+            <li>Suivi plus rapide et mieux organisé</li>
+            <li>Décisions facilitées par des résumés standardisés</li>
           </ul>
-
-          <div class="chips" aria-label="Compatibilité">
-            <span class="chip">📞 Appels entrants</span>
-            <span class="chip">📩 SMS / Email</span>
-            <span class="chip">🧱 Construction QC</span>
-          </div>
         </aside>
       </div>
     </div>
   </main>
 
-  <!-- Agents -->
   <section id="agents">
     <div class="container">
       <div class="section-head">
         <div>
-          <p class="kicker">Les 2 agents</p>
-          <h2>Un problème à la fois. Une solution claire.</h2>
-          <p class="lead">Tu peux commencer avec l’agent d’appels (le plus urgent), puis ajouter le recrutement ensuite.</p>
+          <p class="kicker">Solutions</p>
+          <h2>Deux agents, deux cas d’usage concrets.</h2>
+          <p class="lead">Vous pouvez déployer un seul agent ou les deux, selon vos priorités opérationnelles.</p>
         </div>
       </div>
 
       <div class="split">
-        <article class="card panel" id="agent-reception">
+        <article class="card panel">
           <p class="kicker">Agent téléphonique</p>
-          <h3>Réception intelligente (appels manqués & entrants)</h3>
+          <h3>Agent de réception (appels entrants & appels manqués)</h3>
           <p>
-            Répond automatiquement quand ton équipe est occupée, qualifie le client, puis t’envoie un résumé exploitable.
+            Répond aux appels lorsque l’équipe est indisponible, qualifie la demande et transmet un résumé structuré.
           </p>
           <ul class="checklist">
-            <li>Répond 24/7 (chantier, réunion, hors heures)</li>
-            <li>Questions clés : type de travaux, ville/secteur, délai, disponibilités</li>
-            <li>Résumé prêt à l’action par SMS ou courriel</li>
+            <li>Réponse 24/7 (option) et gestion des pics d’appels</li>
+            <li>Qualification : type de travaux, secteur, échéancier, disponibilités</li>
+            <li>Ton professionnel en français québécois</li>
+            <li>Résumé par SMS ou courriel, clair et exploitable</li>
           </ul>
           <div class="chips">
-            <span class="chip">🔥 ROI immédiat</span>
-            <span class="chip">📞 Moins d’appels perdus</span>
-            <span class="chip">✅ Qualification</span>
+            <span class="chip">📞 Réception</span>
+            <span class="chip">📝 Qualification</span>
+            <span class="chip">📩 Résumé</span>
           </div>
           <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
-            <a class="btn primary" href="#contact">Vérifier compatibilité</a>
-            <a class="btn" href="#faq">FAQ</a>
+            <a class="btn primary" href="#contact">Demander une démo</a>
+            <a class="btn" href="#faq">Questions fréquentes</a>
           </div>
         </article>
 
-        <article class="card panel" id="agent-recrutement">
+        <article class="card panel">
           <p class="kicker">Agent RH</p>
-          <h3>Recrutement & pré-qualification (CV)</h3>
+          <h3>Agent de recrutement (tri & pré-qualification)</h3>
           <p>
-            L’agent analyse CV et documents, applique tes critères, et génère une shortlist claire avec justification.
+            Analyse les candidatures, applique vos critères et prépare une shortlist avec justification.
           </p>
           <ul class="checklist">
-            <li>Extraction CV (PDF, pièces jointes)</li>
-            <li>Critères obligatoires vs optionnels + scoring</li>
-            <li>Justification + manques à valider</li>
-            <li>Shortlist prête à appeler</li>
+            <li>Extraction des informations clés (CV + pièces jointes)</li>
+            <li>Critères obligatoires vs optionnels + scoring configurable</li>
+            <li>Résumé + manques à valider pour accélérer le suivi</li>
+            <li>Shortlist prête à appeler ou à transmettre à l’équipe</li>
           </ul>
           <div class="chips">
-            <span class="chip">⏱️ Moins de tri</span>
-            <span class="chip">🧠 Score clair</span>
-            <span class="chip">✅ Cohérence</span>
+            <span class="chip">📄 CV</span>
+            <span class="chip">✅ Critères</span>
+            <span class="chip">⭐ Shortlist</span>
           </div>
           <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
             <a class="btn" href="#contact">Demander une démo</a>
-            <a class="btn" href="#processus">Processus</a>
+            <a class="btn" href="#processus">Déploiement</a>
           </div>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- Benefits -->
-  <section id="benefices">
+  <section id="capacites">
     <div class="container">
       <div class="section-head">
         <div>
-          <p class="kicker">Bénéfices</p>
-          <h2>Plus de contrôle, plus de vitesse, moins de pertes.</h2>
-          <p class="lead">On ne remplace pas ton équipe : on la rend plus rapide et plus constante.</p>
+          <p class="kicker">Capacités</p>
+          <h2>Conçu pour être simple à utiliser au quotidien.</h2>
+          <p class="lead">L’objectif : fournir des informations complètes et structurées, sans complexifier vos opérations.</p>
         </div>
       </div>
 
-      <div class="proof">
+      <div class="tiles">
         <div class="tile">
-          <h4>📞 Appels : tu récupères des leads</h4>
-          <p>Chaque appel manqué peut être un contrat perdu. L’agent qualifie et te renvoie l’info.</p>
+          <h4>🧩 Configuration sur mesure</h4>
+          <p>Questions, critères et formats de résumés ajustés à votre réalité terrain.</p>
         </div>
         <div class="tile">
-          <h4>🧠 Décisions plus simples</h4>
-          <p>Résumés structurés : tu sais quoi faire, quoi demander, et qui prioriser.</p>
+          <h4>🗂️ Résumés standardisés</h4>
+          <p>Chaque demande est présentée de la même façon pour faciliter le suivi.</p>
         </div>
         <div class="tile">
-          <h4>✅ Expérience client plus pro</h4>
-          <p>Réponses rapides, questions claires, suivi plus constant — même en période chargée.</p>
+          <h4>🔁 Amélioration continue</h4>
+          <p>Ajustements rapides après déploiement, selon vos retours.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Process -->
   <section id="processus">
     <div class="container">
       <div class="section-head">
         <div>
           <p class="kicker">Déploiement</p>
-          <h2>Rapide et orienté résultats.</h2>
-          <p class="lead">Diagnostic → prototype → déploiement → optimisation. Simple.</p>
+          <h2>Une mise en place structurée.</h2>
+          <p class="lead">Diagnostic → prototype → déploiement → optimisation.</p>
         </div>
       </div>
 
@@ -613,67 +623,66 @@
         <div class="step">
           <b>1</b>
           <h3>Diagnostic</h3>
-          <p>On comprend ton flux (appels, soumissions, CV) et ton résultat idéal.</p>
+          <p>Objectifs, volume, critères et livrables attendus.</p>
         </div>
         <div class="step">
           <b>2</b>
           <h3>Prototype</h3>
-          <p>Questions + résumé + intégrations + tests rapides.</p>
+          <p>Questions/critères, format de résumé et tests.</p>
         </div>
         <div class="step">
           <b>3</b>
           <h3>Déploiement</h3>
-          <p>Mise en production + réglages selon tes retours.</p>
+          <p>Mise en production + réglages selon vos retours.</p>
         </div>
         <div class="step">
           <b>4</b>
           <h3>Optimisation</h3>
-          <p>Amélioration continue : meilleure qualification, meilleures conversions.</p>
+          <p>Amélioration de la qualité et de la pertinence au fil du temps.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
   <section id="faq">
     <div class="container">
       <div class="section-head">
         <div>
           <p class="kicker">FAQ</p>
           <h2>Questions fréquentes</h2>
+          <p class="lead">Réponses courtes, orientées décision.</p>
         </div>
       </div>
 
       <details>
-        <summary>Est-ce que ça remplace une réceptionniste ? <span aria-hidden="true">+</span></summary>
-        <p class="faq-a">Non. L’agent couvre surtout quand votre équipe est occupée ou hors heures, et vous envoie un résumé prêt à rappeler.</p>
+        <summary>Est-ce que l’agent remplace une personne ? <span aria-hidden="true">+</span></summary>
+        <p class="faq-a">Non. Il structure l’information et couvre les périodes d’indisponibilité. L’équipe conserve la décision et la relation.</p>
       </details>
 
       <details>
-        <summary>Est-ce que ça fonctionne avec mon numéro actuel ? <span aria-hidden="true">+</span></summary>
-        <p class="faq-a">Souvent oui. On vérifie la configuration pendant la démo et on adapte selon votre réalité.</p>
+        <summary>Est-ce compatible avec notre numéro ? <span aria-hidden="true">+</span></summary>
+        <p class="faq-a">Dans la plupart des cas, oui. On valide la configuration lors de la démo et on adapte selon votre environnement.</p>
       </details>
 
       <details>
         <summary>Combien ça coûte ? <span aria-hidden="true">+</span></summary>
-        <p class="faq-a">Soumission sur mesure selon le volume, la complexité et les intégrations. On clarifie tout après la démo.</p>
+        <p class="faq-a">Les modalités sont sur mesure selon le volume, la complexité et les intégrations. Nous clarifions tout après la démo.</p>
       </details>
 
       <details>
-        <summary>Est-ce compliqué à utiliser ? <span aria-hidden="true">+</span></summary>
-        <p class="faq-a">Non. Le but est que ça soit simple : vous recevez des résumés et vous gardez la décision finale.</p>
+        <summary>Combien de temps pour déployer ? <span aria-hidden="true">+</span></summary>
+        <p class="faq-a">Selon le cas d’usage et le niveau d’intégration. Un premier prototype peut être présenté rapidement après le diagnostic.</p>
       </details>
     </div>
   </section>
 
-  <!-- Contact -->
   <section id="contact">
     <div class="container">
       <div class="section-head">
         <div>
           <p class="kicker">Contact</p>
-          <h2>Demande de démo</h2>
-          <p class="lead">Explique ton besoin, je te reviens rapidement.</p>
+          <h2>Demander une démo</h2>
+          <p class="lead">Décrivez votre besoin et nous vous recontactons rapidement.</p>
         </div>
       </div>
 
@@ -705,29 +714,29 @@
 
             <div>
               <label for="besoin">Ton besoin</label>
-              <textarea id="besoin" name="Ton besoin" placeholder="Ex : On veut arrêter de perdre des appels. Ou : On veut une shortlist des candidats admissibles." required></textarea>
+              <textarea id="besoin" name="Ton besoin" placeholder="Ex : réception téléphonique, qualification des demandes, tri des CV, etc." required></textarea>
             </div>
 
             <button class="btn primary" type="submit">Envoyer</button>
           </form>
 
           <p class="smallprint">
-            Aucun prix affiché — soumission sur mesure après démo. Réponse sous 24h ouvrables.
+            Aucune tarification affichée — proposition sur mesure après démo. Réponse sous 24h ouvrables.
           </p>
         </div>
 
-        <aside class="card panel" aria-label="Aide à la demande">
-          <h3>Pour accélérer la démo</h3>
-          <p>Ajoute 2-3 infos (même approximatives) :</p>
+        <aside class="card panel" aria-label="Informations utiles">
+          <h3>Informations utiles</h3>
+          <p>Pour accélérer la prise en charge, vous pouvez préciser :</p>
           <ul class="checklist">
-            <li>Quel agent t’intéresse (appels / recrutement / les 2)</li>
-            <li>Volume (appels/jour ou CV/semaine)</li>
-            <li>Ton résultat idéal (résumé SMS? prise d’info? shortlist?)</li>
+            <li>Le cas d’usage principal (réception / recrutement / les deux)</li>
+            <li>Votre volume (appels/jour ou CV/semaine)</li>
+            <li>Le format de sortie souhaité (SMS, courriel, résumé, shortlist)</li>
           </ul>
 
           <div style="margin-top:14px; padding:14px; border-radius:16px; border:1px solid var(--line); background: rgba(255,255,255,.03);">
             <p style="margin:0; color:var(--muted); font-size:14px;">
-              <strong style="color:var(--text)">Tip :</strong> Commence avec l’agent d’appels (ROI immédiat), puis on ajoute le recrutement si ça fait du sens.
+              <strong style="color:var(--text)">Note :</strong> une démo sert à valider la pertinence et la compatibilité avant toute proposition.
             </p>
           </div>
         </aside>
@@ -740,8 +749,8 @@
       <div class="footer-row">
         <div>© <span id="year"></span> SDsmartAgents — Montréal, QC</div>
         <div style="display:flex; gap:12px; flex-wrap:wrap;">
-          <a href="#agents">Agents</a>
-          <a href="#processus">Processus</a>
+          <a href="#agents">Solutions</a>
+          <a href="#processus">Déploiement</a>
           <a href="#contact">Contact</a>
         </div>
       </div>
