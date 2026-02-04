@@ -2,44 +2,36 @@
 <html lang="fr-CA">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="SDsmartAgents — Agents intelligents sur mesure pour entreprises de construction à Montréal : agent de réception téléphonique 24/7 et agent de recrutement (tri & pré-qualification)." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="SDsmartAgents — Agents intelligents sur mesure pour la construction à Montréal : réception téléphonique 24/7 (qualification + résumé) et recrutement (tri & pré-qualification)." />
   <meta name="theme-color" content="#0B1020" />
-  <title>SDsmartAgents — Agents intelligents pour la construction (Montréal)</title>
+  <title>SDsmartAgents — Agents intelligents (Construction Montréal)</title>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/logo-sdsmartagents.png" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="SDsmartAgents — Agents intelligents pour la construction (Montréal)" />
-  <meta property="og:description" content="Réception téléphonique 24/7 et recrutement automatisé : résumés structurés, qualification, shortlist. Démo sur demande." />
-  <meta property="og:type" content="website" />
+  <!-- Favicon (logo à la racine du repo) -->
+  <link rel="icon" type="image/png" href="logo-sdsmartagents.png" />
 
   <style>
     :root{
       --bg:#070A12;
-      --bg2:#0B1020;
-      --card: rgba(255,255,255,.04);
-      --card2: rgba(255,255,255,.06);
-      --line: rgba(255,255,255,.10);
-      --line2: rgba(255,255,255,.16);
       --text:#EAF0FF;
-      --muted: rgba(234,240,255,.72);
-      --muted2: rgba(234,240,255,.55);
+      --muted:rgba(234,240,255,.72);
+      --muted2:rgba(234,240,255,.55);
+      --line:rgba(255,255,255,.10);
+      --line2:rgba(255,255,255,.16);
+      --card:rgba(255,255,255,.04);
       --brand:#7C5CFF;
       --brand2:#34D399;
-      --shadow: 0 18px 60px rgba(0,0,0,.45);
-      --radius: 18px;
-      --radius2: 26px;
-      --max: 1140px;
-      --pad: 22px;
+      --shadow:0 18px 60px rgba(0,0,0,.45);
+      --r:18px;
+      --r2:26px;
+      --max:1140px;
+      --pad:22px;
     }
-
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       color:var(--text);
       background:
         radial-gradient(1000px 560px at 18% 0%, rgba(124,92,255,.18), transparent 60%),
@@ -52,7 +44,7 @@
     a{color:inherit}
     .container{max-width:var(--max); margin:0 auto; padding:0 var(--pad)}
 
-    /* Topbar */
+    /* Header */
     .topbar{
       position:sticky; top:0; z-index:50;
       backdrop-filter: blur(14px);
@@ -65,8 +57,7 @@
     }
     .brand{
       display:flex; align-items:center; gap:10px;
-      text-decoration:none;
-      font-weight:900;
+      text-decoration:none; font-weight:900;
       letter-spacing:.2px;
     }
     .brand-logo{
@@ -77,9 +68,7 @@
       background: rgba(255,255,255,.03);
       box-shadow: 0 14px 40px rgba(0,0,0,.35);
     }
-    .navlinks{
-      display:flex; gap:10px; align-items:center;
-    }
+    .navlinks{display:flex; gap:10px; align-items:center;}
     .navlinks a{
       text-decoration:none;
       color:var(--muted);
@@ -108,6 +97,7 @@
       background: rgba(255,255,255,.03);
       transition:.18s ease;
       white-space:nowrap;
+      cursor:pointer;
     }
     .btn:hover{transform: translateY(-1px); border-color: rgba(255,255,255,.26)}
     .btn.primary{
@@ -116,7 +106,7 @@
       color:#071018;
       box-shadow: 0 16px 50px rgba(124,92,255,.14);
     }
-    .btn.primary:hover{filter:brightness(1.05)}
+
     .hamburger{display:none}
     .mobilemenu{display:none}
 
@@ -124,7 +114,7 @@
     .hero{padding:72px 0 34px}
     .hero-grid{
       display:grid;
-      grid-template-columns: 1.12fr .88fr;
+      grid-template-columns: 1.1fr .9fr;
       gap:18px;
       align-items:stretch;
     }
@@ -145,6 +135,7 @@
       background: var(--brand2);
       box-shadow:0 0 0 4px rgba(52,211,153,.14);
     }
+
     .hero-mark{
       display:flex; align-items:center; gap:12px;
       margin:18px 0 10px;
@@ -158,12 +149,11 @@
       box-shadow: 0 18px 60px rgba(0,0,0,.42);
       filter: drop-shadow(0 0 24px rgba(124,92,255,.18));
     }
-    .hero-mark .mark-text{
-      display:flex; flex-direction:column;
-      gap:2px;
+    .hero-mark b{
+      font-size:14px; letter-spacing:.06em; text-transform:uppercase;
+      display:block;
     }
-    .hero-mark .mark-text b{font-size:14px; letter-spacing:.06em; text-transform:uppercase}
-    .hero-mark .mark-text span{color:var(--muted2); font-size:13px}
+    .hero-mark span{color:var(--muted2); font-size:13px}
 
     h1{
       margin:12px 0 10px;
@@ -175,7 +165,7 @@
       margin:0 0 18px;
       color:var(--muted);
       font-size:18px;
-      max-width:64ch;
+      max-width:66ch;
     }
     .hero-actions{display:flex; gap:12px; flex-wrap:wrap; margin:18px 0 10px}
     .note{
@@ -185,11 +175,10 @@
       display:flex; gap:10px; align-items:flex-start;
     }
 
-    /* Cards */
     .card{
       border:1px solid var(--line);
       background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
-      border-radius: var(--radius2);
+      border-radius: var(--r2);
       box-shadow: var(--shadow);
     }
     .hero-card{padding:18px}
@@ -210,12 +199,7 @@
     .minilist{margin:14px 0 0; padding-left:18px; color:var(--muted)}
     .minilist li{margin:6px 0}
 
-    /* Sections */
     section{padding:60px 0}
-    .section-head{
-      display:flex; align-items:flex-end; justify-content:space-between;
-      gap:16px; margin-bottom:16px;
-    }
     .kicker{
       color:var(--muted2);
       text-transform:uppercase;
@@ -250,60 +234,10 @@
       font-size:12px;
     }
 
-    /* Capability tiles */
-    .tiles{
-      margin-top:18px;
-      display:grid; gap:12px;
-      grid-template-columns: repeat(3, 1fr);
-    }
-    .tile{
-      padding:16px;
-      border-radius: var(--radius);
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
-    }
-    .tile h4{margin:0 0 6px; font-size:15px}
-    .tile p{margin:0; color:var(--muted); font-size:14px}
-
-    /* Steps */
-    .steps{
-      margin-top:18px;
-      display:grid; gap:14px;
-      grid-template-columns: repeat(4, 1fr);
-    }
-    .step{
-      padding:16px;
-      border-radius: var(--radius);
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      position:relative;
-      overflow:hidden;
-    }
-    .step::before{
-      content:"";
-      position:absolute; inset:-60px -60px auto auto;
-      width:120px; height:120px;
-      background: radial-gradient(circle at 30% 30%, rgba(124,92,255,.30), transparent 55%);
-      transform: rotate(20deg);
-    }
-    .step b{
-      display:inline-flex;
-      width:30px; height:30px;
-      border-radius:10px;
-      align-items:center; justify-content:center;
-      background: rgba(255,255,255,.06);
-      border:1px solid var(--line);
-      margin-bottom:10px;
-      font-weight:900;
-    }
-    .step h3{margin:0 0 6px; font-size:16px}
-    .step p{margin:0; color:var(--muted); font-size:14px}
-
-    /* FAQ */
     details{
       border:1px solid var(--line);
       background: rgba(255,255,255,.03);
-      border-radius: var(--radius);
+      border-radius: var(--r);
       padding: 14px 14px;
     }
     details + details{margin-top:10px}
@@ -319,7 +253,6 @@
     summary::-webkit-details-marker{display:none}
     .faq-a{margin:10px 0 0; color:var(--muted)}
 
-    /* Contact */
     .contact{
       display:grid; gap:16px;
       grid-template-columns: 1fr .9fr;
@@ -347,7 +280,6 @@
     }
     .smallprint{margin:10px 0 0; color:var(--muted2); font-size:13px}
 
-    /* Footer */
     footer{
       padding:28px 0 44px;
       border-top: 1px solid var(--line);
@@ -361,12 +293,9 @@
     .footer-row a{color:var(--muted2); text-decoration:none}
     .footer-row a:hover{color:var(--text)}
 
-    /* Responsive */
     @media (max-width: 980px){
       .hero-grid{grid-template-columns:1fr}
       .split{grid-template-columns:1fr}
-      .tiles{grid-template-columns:1fr}
-      .steps{grid-template-columns:1fr 1fr}
       .contact{grid-template-columns:1fr}
       h1{font-size:40px}
     }
@@ -383,10 +312,7 @@
         color:var(--text);
         font-weight:900;
       }
-      .mobilemenu{
-        display:none;
-        padding: 0 0 14px;
-      }
+      .mobilemenu{display:none; padding: 0 0 14px;}
       .mobilemenu.open{display:block}
       .mobilemenu a{
         display:block;
@@ -405,7 +331,6 @@
         background: linear-gradient(135deg, rgba(124,92,255,.96), rgba(52,211,153,.72));
       }
       .formgrid{grid-template-columns:1fr}
-      .steps{grid-template-columns:1fr}
       h1{font-size:36px}
     }
     @media (prefers-reduced-motion: reduce){
@@ -420,14 +345,13 @@
     <div class="container">
       <div class="nav">
         <a class="brand" href="#top" aria-label="Aller en haut de page">
-          <img class="brand-logo" src="logo-sdsmartagents.png" alt="SDsmartAgents">
-          <span class="brand-logo" style="display:none; background:linear-gradient(135deg, rgba(124,92,255,.96), rgba(52,211,153,.72)); border:none;"></span>
-          <span style="margin-left:6px;">SDsmartAgents</span>
+          <!-- Logo (à la racine) -->
+          <img class="brand-logo" src="logo-sdsmartagents.png" alt="Logo SDsmartAgents" />
+          <span>SDsmartAgents</span>
         </a>
 
         <nav class="navlinks" aria-label="Navigation principale">
           <a href="#agents">Solutions</a>
-          <a href="#capacites">Capacités</a>
           <a href="#processus">Déploiement</a>
           <a href="#faq">FAQ</a>
           <a href="#contact">Contact</a>
@@ -443,7 +367,6 @@
 
       <div class="mobilemenu" id="mobileMenu" aria-label="Menu mobile">
         <a href="#agents">Solutions</a>
-        <a href="#capacites">Capacités</a>
         <a href="#processus">Déploiement</a>
         <a href="#faq">FAQ</a>
         <a href="#contact" class="primary">Demander une démo</a>
@@ -461,18 +384,19 @@
           </div>
 
           <div class="hero-mark">
-           <img src="logo-sdsmartagents.png" alt="Logo SDsmartAgents">
-            <div class="mark-text">
+            <img src="logo-sdsmartagents.png" alt="Logo SDsmartAgents" />
+            <div>
               <b>SDsmartAgents</b>
               <span>Agents intelligents sur mesure</span>
             </div>
           </div>
 
-          <h1>Agents intelligents pour optimiser l’accueil client et les opérations.</h1>
+          <!-- ✅ NOUVEAU MESSAGE (plus accrocheur + pro) -->
+          <h1>Une réception et un recrutement plus structurés, sans alourdir vos opérations.</h1>
 
           <p class="sub">
-            Nous concevons et déployons des agents spécialisés pour les entreprises de construction :
-            <strong>réception téléphonique 24/7</strong> (qualification + résumé) et
+            Nous concevons des agents spécialisés pour les entreprises de construction :
+            <strong>réception téléphonique 24/7</strong> (qualification + compte-rendu) et
             <strong>recrutement</strong> (tri & pré-qualification des candidatures).
           </p>
 
@@ -484,7 +408,7 @@
 
           <p class="note">
             <span aria-hidden="true">ℹ️</span>
-            <span><strong>Approche sur mesure :</strong> la configuration dépend de votre volume, de vos critères et de vos outils.</span>
+            <span><strong>Approche sur mesure :</strong> questions, critères et format de résumé adaptés à votre réalité.</span>
           </p>
         </div>
 
@@ -493,27 +417,27 @@
 
           <div class="statgrid">
             <div class="stat">
-              <b>Qualification structurée</b>
-              <span>Questions cohérentes, informations complètes</span>
+              <b>Qualification cohérente</b>
+              <span>Informations complètes et standardisées</span>
             </div>
             <div class="stat">
               <b>Compte-rendu clair</b>
-              <span>SMS ou courriel, prêt pour l’action</span>
+              <span>SMS ou courriel, prêt pour le suivi</span>
             </div>
             <div class="stat">
-              <b>Disponibilité</b>
-              <span>Couverture 24/7 (selon votre besoin)</span>
+              <b>Couverture flexible</b>
+              <span>24/7 ou selon vos périodes critiques</span>
             </div>
             <div class="stat">
               <b>Shortlist RH</b>
-              <span>Priorisation des candidatures</span>
+              <span>Priorisation des candidats</span>
             </div>
           </div>
 
           <ul class="minilist">
             <li>Expérience client plus uniforme</li>
             <li>Suivi plus rapide et mieux organisé</li>
-            <li>Décisions facilitées par des résumés standardisés</li>
+            <li>Moins d’allers-retours inutiles</li>
           </ul>
         </aside>
       </div>
@@ -522,26 +446,19 @@
 
   <section id="agents">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="kicker">Solutions</p>
-          <h2>Deux agents, deux cas d’usage concrets.</h2>
-          <p class="lead">Vous pouvez déployer un seul agent ou les deux, selon vos priorités opérationnelles.</p>
-        </div>
-      </div>
+      <p class="kicker">Solutions</p>
+      <h2>Deux agents, deux cas d’usage concrets.</h2>
+      <p class="lead">Déployez un agent ou les deux selon vos priorités opérationnelles.</p>
 
       <div class="split">
         <article class="card panel">
           <p class="kicker">Agent téléphonique</p>
           <h3>Agent de réception (appels entrants & appels manqués)</h3>
-          <p>
-            Répond aux appels lorsque l’équipe est indisponible, qualifie la demande et transmet un résumé structuré.
-          </p>
+          <p>Répond lorsque l’équipe est indisponible, qualifie la demande et transmet un résumé structuré.</p>
           <ul class="checklist">
-            <li>Réponse 24/7 (option) et gestion des pics d’appels</li>
-            <li>Qualification : type de travaux, secteur, échéancier, disponibilités</li>
+            <li>Questions clés : type de travaux, secteur, échéancier, disponibilités</li>
             <li>Ton professionnel en français québécois</li>
-            <li>Résumé par SMS ou courriel, clair et exploitable</li>
+            <li>Compte-rendu par SMS ou courriel</li>
           </ul>
           <div class="chips">
             <span class="chip">📞 Réception</span>
@@ -550,21 +467,18 @@
           </div>
           <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
             <a class="btn primary" href="#contact">Demander une démo</a>
-            <a class="btn" href="#faq">Questions fréquentes</a>
+            <a class="btn" href="#faq">FAQ</a>
           </div>
         </article>
 
         <article class="card panel">
           <p class="kicker">Agent RH</p>
           <h3>Agent de recrutement (tri & pré-qualification)</h3>
-          <p>
-            Analyse les candidatures, applique vos critères et prépare une shortlist avec justification.
-          </p>
+          <p>Analyse les candidatures, applique vos critères et prépare une shortlist avec justification.</p>
           <ul class="checklist">
-            <li>Extraction des informations clés (CV + pièces jointes)</li>
-            <li>Critères obligatoires vs optionnels + scoring configurable</li>
-            <li>Résumé + manques à valider pour accélérer le suivi</li>
-            <li>Shortlist prête à appeler ou à transmettre à l’équipe</li>
+            <li>Extraction CV + pièces jointes (PDF)</li>
+            <li>Critères obligatoires / optionnels + scoring configurable</li>
+            <li>Résumé + manques à valider</li>
           </ul>
           <div class="chips">
             <span class="chip">📄 CV</span>
@@ -580,63 +494,30 @@
     </div>
   </section>
 
-  <section id="capacites">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="kicker">Capacités</p>
-          <h2>Conçu pour être simple à utiliser au quotidien.</h2>
-          <p class="lead">L’objectif : fournir des informations complètes et structurées, sans complexifier vos opérations.</p>
-        </div>
-      </div>
-
-      <div class="tiles">
-        <div class="tile">
-          <h4>🧩 Configuration sur mesure</h4>
-          <p>Questions, critères et formats de résumés ajustés à votre réalité terrain.</p>
-        </div>
-        <div class="tile">
-          <h4>🗂️ Résumés standardisés</h4>
-          <p>Chaque demande est présentée de la même façon pour faciliter le suivi.</p>
-        </div>
-        <div class="tile">
-          <h4>🔁 Amélioration continue</h4>
-          <p>Ajustements rapides après déploiement, selon vos retours.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section id="processus">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="kicker">Déploiement</p>
-          <h2>Une mise en place structurée.</h2>
-          <p class="lead">Diagnostic → prototype → déploiement → optimisation.</p>
-        </div>
-      </div>
+      <p class="kicker">Déploiement</p>
+      <h2>Une mise en place structurée.</h2>
+      <p class="lead">Diagnostic → prototype → déploiement → optimisation.</p>
 
-      <div class="steps">
-        <div class="step">
-          <b>1</b>
-          <h3>Diagnostic</h3>
+      <div class="split">
+        <div class="card panel">
+          <h3>1) Diagnostic</h3>
           <p>Objectifs, volume, critères et livrables attendus.</p>
+          <div class="chips">
+            <span class="chip">🎯 Objectifs</span>
+            <span class="chip">📊 Volume</span>
+            <span class="chip">🧩 Outils</span>
+          </div>
         </div>
-        <div class="step">
-          <b>2</b>
-          <h3>Prototype</h3>
-          <p>Questions/critères, format de résumé et tests.</p>
-        </div>
-        <div class="step">
-          <b>3</b>
-          <h3>Déploiement</h3>
-          <p>Mise en production + réglages selon vos retours.</p>
-        </div>
-        <div class="step">
-          <b>4</b>
-          <h3>Optimisation</h3>
-          <p>Amélioration de la qualité et de la pertinence au fil du temps.</p>
+        <div class="card panel">
+          <h3>2) Prototype</h3>
+          <p>Questions/critères, format de résumé et tests rapides.</p>
+          <div class="chips">
+            <span class="chip">🧪 Tests</span>
+            <span class="chip">📝 Scripts</span>
+            <span class="chip">✅ Validation</span>
+          </div>
         </div>
       </div>
     </div>
@@ -644,12 +525,9 @@
 
   <section id="faq">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="kicker">FAQ</p>
-          <h2>Questions fréquentes</h2>
-        </div>
-      </div>
+      <p class="kicker">FAQ</p>
+      <h2>Questions fréquentes</h2>
+      <p class="lead">Réponses courtes, orientées décision.</p>
 
       <details>
         <summary>Est-ce que l’agent remplace une personne ? <span aria-hidden="true">+</span></summary>
@@ -658,34 +536,25 @@
 
       <details>
         <summary>Est-ce compatible avec notre numéro ? <span aria-hidden="true">+</span></summary>
-        <p class="faq-a">Dans la plupart des cas, oui. On valide la configuration lors de la démo et on adapte selon votre environnement.</p>
+        <p class="faq-a">Dans la majorité des cas, oui. La démo sert à valider la configuration la plus simple pour votre contexte.</p>
       </details>
 
       <details>
         <summary>Combien ça coûte ? <span aria-hidden="true">+</span></summary>
-        <p class="faq-a">Les modalités sont sur mesure selon le volume, la complexité et les intégrations. Nous clarifions tout après la démo.</p>
-      </details>
-
-      <details>
-        <summary>Combien de temps pour déployer ? <span aria-hidden="true">+</span></summary>
-        <p class="faq-a">Selon le cas d’usage et le niveau d’intégration. Un premier prototype peut être présenté rapidement après le diagnostic.</p>
+        <p class="faq-a">Proposition sur mesure selon le volume, la complexité et les intégrations. Nous clarifions tout après la démo.</p>
       </details>
     </div>
   </section>
 
   <section id="contact">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="kicker">Contact</p>
-          <h2>Demander une démo</h2>
-          <p class="lead">Décrivez votre besoin et nous vous recontactons rapidement.</p>
-        </div>
-      </div>
+      <p class="kicker">Contact</p>
+      <h2>Demander une démo</h2>
+      <p class="lead">Décrivez votre besoin et nous vous recontactons rapidement.</p>
 
       <div class="contact">
         <div class="card panel">
-          <!-- ✅ Formspree (gardé tel quel) -->
+          <!-- ✅ Formspree (inchangé) -->
           <form action="https://formspree.io/f/xvzzbrrd" method="POST">
             <div class="formgrid">
               <div>
@@ -722,20 +591,14 @@
           </p>
         </div>
 
-        <aside class="card panel" aria-label="Informations utiles">
+        <aside class="card panel">
           <h3>Informations utiles</h3>
-          <p>Pour accélérer la prise en charge, vous pouvez préciser :</p>
+          <p style="margin:0 0 12px; color:var(--muted);">Pour accélérer la prise en charge, vous pouvez préciser :</p>
           <ul class="checklist">
-            <li>Le cas d’usage principal (réception / recrutement / les deux)</li>
-            <li>Votre volume (appels/jour ou CV/semaine)</li>
-            <li>Le format de sortie souhaité (SMS, courriel, résumé, shortlist)</li>
+            <li>Cas d’usage principal (réception / recrutement / les deux)</li>
+            <li>Volume (appels/jour ou CV/semaine)</li>
+            <li>Format souhaité (SMS, courriel, compte-rendu, shortlist)</li>
           </ul>
-
-          <div style="margin-top:14px; padding:14px; border-radius:16px; border:1px solid var(--line); background: rgba(255,255,255,.03);">
-            <p style="margin:0; color:var(--muted); font-size:14px;">
-              <strong style="color:var(--text)">Note :</strong> une démo sert à valider la pertinence et la compatibilité avant toute proposition.
-            </p>
-          </div>
         </aside>
       </div>
     </div>
@@ -758,13 +621,11 @@
     // Menu mobile
     const btn = document.getElementById('menuBtn');
     const menu = document.getElementById('mobileMenu');
-
     if (btn && menu) {
       btn.addEventListener('click', () => {
         const open = menu.classList.toggle('open');
         btn.setAttribute('aria-expanded', open ? 'true' : 'false');
       });
-
       menu.querySelectorAll('a').forEach(a => {
         a.addEventListener('click', () => {
           menu.classList.remove('open');
@@ -773,7 +634,7 @@
       });
     }
 
-    // Année footer
+    // Année
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
